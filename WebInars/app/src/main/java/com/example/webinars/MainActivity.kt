@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var buttonAniadirTarea:Button
     lateinit var editTextTarea: EditText
     lateinit var listadoTareas: RecyclerView
+
+    var tareas = mutableListOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addTask() {
         val tareaAniadir:String = editTextTarea.text.toString()
+        tareas.add(tareaAniadir)
     }
 
     private fun initView() {
